@@ -1,0 +1,122 @@
+@font-face {
+    font-family: lato;
+    src: url(../fonts/Lato-Bold.ttf);
+}
+:root{
+    --heading-bg-color: #24A8DF;
+    --content-bg-color: #F35D4D;
+    --pageContent-heading: 25px;
+    --navLinks-fontSize: 17px;
+}
+body{
+    margin:0;
+    padding:0;
+    background-color: var(--content-bg-color);
+    font-family: lato;
+}
+a{
+    text-decoration: none;
+}
+input{
+    width:400px;
+    height:40px;
+    border:none;
+    border:1px solid #bfbfbf;
+    border-radius: 20px;
+    font-size:13px;
+    padding-left:20px;
+    margin-bottom:20px;
+}
+button{
+    width:150px;
+    height:40px;
+    margin:0px;
+    font-size:14px;
+    border:none;
+    border-radius: 20px;
+    background-color: white;
+    color:var(--content-bg-color);
+    font-weight: bold;
+    margin-right:20px;
+}
+input:focus, button:focus{
+    outline: none;
+}
+header{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    height:100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #394554;
+    justify-content: space-around;
+}
+.pageTitle a{
+    color: var(--heading-bg-color);
+    font-size: 35px;
+}
+.allLinks{
+    flex-grow: 1;
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.navLinks a{
+    color:white;
+    font-size: var(--navLinks-fontSize);
+}
+@media (max-width:500px){
+    .pageTitle{
+        margin-bottom: 20px;
+    }
+    header{
+        height:120px;
+    }
+}
+.formContainer{
+    margin-bottom: 30px;
+}
+.formContainer label{
+    color:white;
+    width:150px;
+}
+.pageContent h2{
+    color:white;
+    margin-top:50px;
+    margin-bottom:50px;
+    text-align:center;
+    font-size: var(--pageContent-heading);
+}
+.allBooks{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.allBooks img{
+    height: 240px;
+    width: 160px;
+}
+.bookLink{
+    margin: 0px 15px 20px 15px;
+}
+.pageInnerContent{
+    text-align: center;
+}
+
+.authorItem{
+    display:flex;
+    align-items: center;
+    align-content: center;
+    padding: 20px 40px;
+}
+.authorItem p{
+    margin:0px;
+    width:250px;
+    color:white;
+    font-size: 18px;
+}
+button a{
+    color:var(--content-bg-color);
+}
