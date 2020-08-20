@@ -5,6 +5,7 @@
 :root{
     --heading-bg-color: #24A8DF;
     --content-bg-color: #F35D4D;
+    --input-bg-color:#771308;
     --pageContent-heading: 25px;
     --navLinks-fontSize: 17px;
 }
@@ -17,7 +18,7 @@ body{
 a{
     text-decoration: none;
 }
-input{
+input, select,textarea{
     width:400px;
     height:40px;
     border:none;
@@ -27,7 +28,14 @@ input{
     padding-left:20px;
     margin-bottom:20px;
 }
+textarea{
+    height: 100px;
+    resize: none;
+    padding-top:10px;
+    padding-bottom:10px;
+}
 button{
+    cursor: pointer;
     width:150px;
     height:40px;
     margin:0px;
@@ -39,7 +47,7 @@ button{
     font-weight: bold;
     margin-right:20px;
 }
-input:focus, button:focus{
+input:focus, button:focus, textarea:focus{
     outline: none;
 }
 header{
@@ -78,9 +86,8 @@ header{
 .formContainer{
     margin-bottom: 30px;
 }
-.formContainer label{
+label{
     color:white;
-    width:150px;
 }
 .pageContent h2{
     color:white;
@@ -101,6 +108,11 @@ header{
 .bookLink{
     margin: 0px 15px 20px 15px;
 }
+.bookLink p{
+    color:white;
+    font-size:18px;
+
+}
 .pageInnerContent{
     text-align: center;
 }
@@ -119,4 +131,33 @@ header{
 }
 button a{
     color:var(--content-bg-color);
+}
+
+.addBookRow{
+    display:flex;
+}
+.addBookItem label{
+    margin-bottom:5px;
+}
+.addBookItem{
+    display:flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 0;
+    margin-left:3rem;
+}
+.filepond{
+    border-radius: 10px;
+}
+.filepond label{
+    color: var(--content-bg-color);
+}
+.filepond--root{
+    font-family: lato;
+    margin-bottom:0;
+    width:120px;
+    max-height:10em;
+}
+.filepond--drop-label{
+    font-size: inherit;
 }

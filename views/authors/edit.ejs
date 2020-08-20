@@ -1,8 +1,12 @@
-<h2>Edit Author</h2>
+<div class="pageContent">
+    <h2>Edit Author</h2>
 
-<form action="/authors/<%= author.id %>?_method=PUT" method="POST">
-
-    <%- include('_form_fields') %>
-    <a href="/authors/<%= author.id %>">Cancel</a>
-    <button type="submit">Update</button>
-</form>
+    <div class="pageInnerContent">
+        <form action="/authors/<%= author.id %>?_method=PUT" method="POST">
+            <%- include('_form_fields') %> </br>
+            <button type="submit">Update</button>
+            <button><a href="/authors/<%= author.id %>">Cancel</a></button>
+        </form>
+    </div>
+    
+</div>
